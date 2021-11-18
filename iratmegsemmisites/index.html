@@ -1,0 +1,670 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+  <meta name="generator" content="Hugo 0.88.1">
+  <title>Checkout example · Bootstrap v5.1</title>
+
+  <link rel="canonical" href="https://getbootstrap.comhttps://getbootstrap.com/docs/5.1/examples/checkout/">
+  <script src="script.js" defer></script>
+  <link rel="stylesheet" href="style.css">
+
+
+
+  <!-- Bootstrap core CSS -->
+  <link href="https://getbootstrap.com/docs/5.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+  <!-- Favicons -->
+  <link rel="apple-touch-icon" href="https://getbootstrap.com/docs/5.1/assets/img/favicons/apple-touch-icon.png"
+    sizes="180x180">
+  <link rel="icon" href="https://getbootstrap.com/docs/5.1/assets/img/favicons/favicon-32x32.png" sizes="32x32"
+    type="image/png">
+  <link rel="icon" href="https://getbootstrap.com/docs/5.1/assets/img/favicons/favicon-16x16.png" sizes="16x16"
+    type="image/png">
+  <link rel="manifest" href="https://getbootstrap.com/docs/5.1/assets/img/favicons/manifest.json">
+  <link rel="mask-icon" href="https://getbootstrap.com/docs/5.1/assets/img/favicons/safari-pinned-tab.svg"
+    color="#7952b3">
+  <link rel="icon" href="https://getbootstrap.com/docs/5.1/assets/img/favicons/favicon.ico">
+  <meta name="theme-color" content="#7952b3">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;600;800&display=swap" rel="stylesheet">
+
+
+
+  <!-- Custom styles for this template -->
+</head>
+
+<body class="bg-light">
+
+  <div class="container">
+    <main>
+      <div class="py-5 text-center">
+        <img class="d-block mx-auto mb-4" src="https://docudepo.hu/wp-content/uploads/2021/09/ducudepo_uj_logo.png"
+          alt="" width="200px">
+        <h2>Ajánlatkérés - Iratmegsemmisítés</h2>
+        <p class="lead">Kérjen árajánlatot tőlünk dokumentum tároló dobozokra, irattárolási szolgáltatásra vagy
+          iratmegsemmisítésre. Amennyiben tudja, hogy mennyi adatot kell kezelni, csak adja meg a lenti kalkulátorba,
+          majd kattintson az "Árajánlatot kérek" gombra. Kollégánk ezután felveszi Önnel a kapcsolatot.</p>
+      </div>
+
+      <div class="row g-5">
+        <div class="col-md-5 col-lg-4 order-md-last">
+          <div class="endcalc sticky-top">
+            <img class="savings" src="summa.svg">
+            <div class="totalsavings"><span id="fullifm">0</span></div>
+            <div class="totalifm">
+              <p id="">Iratfolyóméter</p>
+            </div>
+
+            <div class="totalsavings"><span id="fullkg">0</span></div>
+            <div class="totalifm">
+              <p id="">kg</p>
+            </div>
+            <button class="w-100 btn btn-primary btn-lg submitbtn" type="submit" form="irattarolas-form">Ajánlatot
+              kérek</button>
+
+          </div>
+
+        </div>
+        <div class="col-lg-8 fodiv">
+
+          <!-- Three columns of text below the carousel -->
+          <div class="row">
+            <div class="col-lg-4 order-sm-12">
+              <a href="/docudepo/dobozvasarlas/index.html"><img src="box_inactive.svg" alt="doboz"
+                  class="chosensvg"></a>
+
+              <h4 style="color: grey">Doboz vásárlás</h4>
+            </div><!-- /.col-lg-4 -->
+            <div class="col-lg-4">
+              <a href="/docudepo/irattarolas/index.html"><img src="folder_inactive.svg" alt="doboz"
+                  class="chosensvg"></a>
+
+              <h4>Irattárolás</h4>
+            </div><!-- /.col-lg-4 -->
+            <div class="col-lg-4">
+              <a href="/docudepo/iratmegsemmisites/index.html"><img src="paper-shredder_active.svg" alt="doboz"
+                  class="chosensvg"></a>
+
+              <h4 style="color: grey;">Iratmegsemmisítés</h4>
+            </div><!-- /.col-lg-4 -->
+          </div><!-- /.row -->
+
+          <h4 class="mb-4" style="padding-top: 20px;">Személyes adatok</h4>
+          <form class="needs-validation" id="irattarolas-form">
+            <div class="row g-3">
+              <div class="col-sm-6">
+                <input type="text" class="form-control ddinput" placeholder="Teljes név" aria-label="Teljes név">
+              </div>
+              <div class="col-sm-6">
+                <input type="text" class="form-control ddinput" placeholder="Cégnév" aria-label="Cégnév">
+              </div>
+              <div class="col-sm-6">
+                <input type="email" class="form-control ddinput" placeholder="Email" aria-label="Email">
+              </div>
+
+              <div class="col-sm-6">
+                <input type="tel" class="form-control ddinput" placeholder="Telefonszám" aria-label="telefonszam">
+              </div>
+
+              <div class="row g-3">
+                <div class="col-sm-2">
+                  <input type="text" class="form-control ddinput" placeholder="Irsz" aria-label="Iranyitoszam">
+                </div>
+                <div class="col-sm-3">
+                  <input type="text" class="form-control ddinput" placeholder="Város" aria-label="Város">
+                </div>
+                <div class="col-sm-7">
+                  <input type="text" class="form-control ddinput" placeholder="Utca, házszám"
+                    aria-label="Utca, házszám">
+                </div>
+              </div>
+
+              <hr class="my-4">
+
+              <div class="col-12">
+                <h4>Mennyi iratanyagot kell kezelni?</h2>
+
+              </div>
+              <div class="row" id="row1">
+                <div class="row " id="inputgroup1">
+                  <div class="col-md-5">
+                    <select id="select1" class="form-select ddinput" aria-label="">
+                      <option disabled selected>Mértékegység</option>
+                      <option value="kisemelokarosdosszie">Kis dosszié (emelőkaros)</option>
+                      <option value="tokosiratrendezo">Közepes dosszié (tokos / kihúzós iratrendező)</option>
+                      <option value="nagyemelokarosdosszie">Nagy dosszié (emelőkaros)</option>
+                      <option value="leveltaridoboz">Levéltári doboz</option>
+                      <option value="berkartondoboz">Bérkarton doboz</option>
+                      </option>
+                      <option value="hdoboz">"H" doboz (405x330x300mm)</option>
+                      <option value="pdoboz">"P" doboz (350x310x250mm)</option>
+                      <option value="edoboz">"E" doboz (360x310x310mm)</option>
+                      <option value="ndoboz">"N" doboz (350x250x310mm)</option>
+                      <option value="egysalgo900">Polc - 900 mm széles egy sorba rendezve</option>
+                      <option value="ketsalgo900">Polc - 900 mm széles két sorba rendezve</option>
+                      <option value="egysalgo1000">Polc - 1000 mm széles egy sorba rendezve</option>
+                      <option value="ketsalgo1000">Polc - 1000 mm széles két sorba rendezve</option>
+                      <option value="egysalgo1200">Polc - 1200 mm széles egy sorba rendezve</option>
+                      <option value="ketsalgo1200">Polc - 1200 mm széles két sorba rendezve</option>
+                      <option value="dm3">dm&sup3;</sup>
+                      <option value="zsak">Zsák</option>
+                      <option value="polc800">Polc - 800 mm széles egy sorba rendezve</option>
+                      <option value="ifm">Iratfolyóméter</option>
+                      <!-- <option value="egyeb" oninput="displayEgyeb()">Egyéb</option> -->
+
+                    </select>
+                  </div>
+
+                  <div class="col-md-2">
+                    <input type="number" class="form-control ddinput" placeholder="Mennyiség" value="" id="selectqty1">
+                  </div>
+
+
+                  <div id="szamolo1" class="col-md-5"><span>~ </span>
+                    <span id="selectvalueifm1">0</span>
+                    <span> Iratfolyóméter ~ </span>
+                    <span id="selectvaluekg1">0 </span> kg
+
+                  </div>
+
+
+                  <div class="col-md-5">
+                    <p onclick="showEgyebField1()"><span id="hint1" class="hint">Nem találod a listában amit
+                        keresel?</span></p>
+                  </div>
+                </div>
+                <div class="row" id="inputegyeb1">
+                  <div class="col-md-5">
+                    <input type="text" class="form-control ddinput" placeholder="Egyedi mértékegység" value="" id="">
+                  </div>
+                  <div class="col-md-3">
+                    <input type="number" class="form-control ddinput" placeholder="Mennyiség" value="" id="">
+                  </div>
+                  <div class="col-md-1">
+                    <img src="x-mark.svg" class="close" id="close1" alt="" onclick="hideEgyebField1()">
+                  </div>
+                </div>
+                <div class="row " id="inputgroup2">
+                  <div class="col-md-5">
+                    <select id="select2" class="form-select ddinput" aria-label="">
+                      <option disabled selected>Mértékegység</option>
+                      <option value="kisemelokarosdosszie">Kis dosszié (emelőkaros)</option>
+                      <option value="tokosiratrendezo">Közepes dosszié (tokos / kihúzós iratrendező)</option>
+                      <option value="nagyemelokarosdosszie">Nagy dosszié (emelőkaros)</option>
+                      <option value="leveltaridoboz">Levéltári doboz</option>
+                      <option value="berkartondoboz">Bérkarton doboz</option>
+                      </option>
+                      <option value="hdoboz">"H" doboz (405x330x300mm)</option>
+                      <option value="pdoboz">"P" doboz (350x310x250mm)</option>
+                      <option value="edoboz">"E" doboz (360x310x310mm)</option>
+                      <option value="ndoboz">"N" doboz (350x250x310mm)</option>
+                      <option value="egysalgo900">Polc - 900 mm széles egy sorba rendezve</option>
+                      <option value="ketsalgo900">Polc - 900 mm széles két sorba rendezve</option>
+                      <option value="egysalgo1000">Polc - 1000 mm széles egy sorba rendezve</option>
+                      <option value="ketsalgo1000">Polc - 1000 mm széles két sorba rendezve</option>
+                      <option value="egysalgo1200">Polc - 1200 mm széles egy sorba rendezve</option>
+                      <option value="ketsalgo1200">Polc - 1200 mm széles két sorba rendezve</option>
+                      <option value="dm3">dm&sup3;</sup>
+                      <option value="zsak">Zsák</option>
+                      <option value="polc800">Polc - 800 mm széles egy sorba rendezve</option>
+                      <option value="ifm">Iratfolyóméter</option>
+                      <option value="egyeb">Egyéb</option>
+
+                    </select>
+                  </div>
+
+                  <div class="col-md-2">
+                    <input type="number" class="form-control ddinput" placeholder="Mennyiség" aria-label=""
+                      id="selectqty2" value="">
+                  </div>
+
+                  <div class="col-md-5"><span>~ </span>
+                    <span id="selectvalueifm2">0</span>
+                    <span> Iratfolyóméter ~ </span>
+                    <span id="selectvaluekg2">0 </span> kg
+
+                  </div>
+                  <div class="col-md-5">
+                    <p onclick="showEgyebField2()"><span id="hint1" class="hint">Nem találod a listában amit
+                        keresel?</span></p>
+                  </div>
+                </div>
+                <div class="row" id="inputegyeb2">
+                  <div class="col-md-5">
+                    <input type="text" class="form-control ddinput" placeholder="Egyedi mértékegység" value="" id="">
+                  </div>
+                  <div class="col-md-3">
+                    <input type="number" class="form-control ddinput" placeholder="Mennyiség" value="" id="">
+                  </div>
+                  <div class="col-md-1">
+                    <img src="x-mark.svg" class="close" id="close2" alt="" onclick="hideEgyebField2()">
+                  </div>
+
+                </div>
+
+                <div class="row " id="inputgroup3">
+                  <div class="col-md-5">
+                    <select id="select3" class="form-select ddinput" aria-label="">
+                      <option disabled selected>Mértékegység</option>
+                      <option value="kisemelokarosdosszie">Kis dosszié (emelőkaros)</option>
+                      <option value="tokosiratrendezo">Közepes dosszié (tokos / kihúzós iratrendező)</option>
+                      <option value="nagyemelokarosdosszie">Nagy dosszié (emelőkaros)</option>
+                      <option value="leveltaridoboz">Levéltári doboz</option>
+                      <option value="berkartondoboz">Bérkarton doboz</option>
+                      </option>
+                      <option value="hdoboz">"H" doboz (405x330x300mm)</option>
+                      <option value="pdoboz">"P" doboz (350x310x250mm)</option>
+                      <option value="edoboz">"E" doboz (360x310x310mm)</option>
+                      <option value="ndoboz">"N" doboz (350x250x310mm)</option>
+                      <option value="egysalgo900">Polc - 900 mm széles egy sorba rendezve</option>
+                      <option value="ketsalgo900">Polc - 900 mm széles két sorba rendezve</option>
+                      <option value="egysalgo1000">Polc - 1000 mm széles egy sorba rendezve</option>
+                      <option value="ketsalgo1000">Polc - 1000 mm széles két sorba rendezve</option>
+                      <option value="egysalgo1200">Polc - 1200 mm széles egy sorba rendezve</option>
+                      <option value="ketsalgo1200">Polc - 1200 mm széles két sorba rendezve</option>
+                      <option value="dm3">dm&sup3;</sup>
+                      <option value="zsak">Zsák</option>
+                      <option value="polc800">Polc - 800 mm széles egy sorba rendezve</option>
+                      <option value="ifm">Iratfolyóméter</option>
+                      <option value="egyeb">Egyéb</option>
+
+                    </select>
+                  </div>
+
+                  <div class="col-md-2">
+                    <input type="number" class="form-control ddinput" placeholder="Mennyiség" aria-label=""
+                      id="selectqty3">
+                  </div>
+
+                  <div class="col-md-5"><span>~ </span>
+                    <span id="selectvalueifm3">0</span>
+                    <span> Iratfolyóméter ~ </span>
+                    <span id="selectvaluekg3">0 </span> kg
+
+                  </div>
+                  <div class="col-md-5">
+                    <p onclick="showEgyebField3()"><span id="hint1" class="hint">Nem találod a listában amit
+                        keresel?</span></p>
+                  </div>
+                </div>
+                <div class="row" id="inputegyeb3">
+                  <div class="col-md-5">
+                    <input type="text" class="form-control ddinput" placeholder="Egyedi mértékegység" value="" id="">
+                  </div>
+                  <div class="col-md-3">
+                    <input type="number" class="form-control ddinput" placeholder="Mennyiség" value="" id="">
+                  </div>
+                  <div class="col-md-1">
+                    <img src="x-mark.svg" class="close" id="close3" alt="" onclick="hideEgyebField3()">
+                  </div>
+
+                </div>
+
+                <div class="row " id="inputgroup4">
+                  <div class="col-md-5">
+                    <select id="select4" class="form-select ddinput" aria-label="">
+                      <option disabled selected>Mértékegység</option>
+                      <option value="kisemelokarosdosszie">Kis dosszié (emelőkaros)</option>
+                      <option value="tokosiratrendezo">Közepes dosszié (tokos / kihúzós iratrendező)</option>
+                      <option value="nagyemelokarosdosszie">Nagy dosszié (emelőkaros)</option>
+                      <option value="leveltaridoboz">Levéltári doboz</option>
+                      <option value="berkartondoboz">Bérkarton doboz</option>
+                      </option>
+                      <option value="hdoboz">"H" doboz (405x330x300mm)</option>
+                      <option value="pdoboz">"P" doboz (350x310x250mm)</option>
+                      <option value="edoboz">"E" doboz (360x310x310mm)</option>
+                      <option value="ndoboz">"N" doboz (350x250x310mm)</option>
+                      <option value="egysalgo900">Polc - 900 mm széles egy sorba rendezve</option>
+                      <option value="ketsalgo900">Polc - 900 mm széles két sorba rendezve</option>
+                      <option value="egysalgo1000">Polc - 1000 mm széles egy sorba rendezve</option>
+                      <option value="ketsalgo1000">Polc - 1000 mm széles két sorba rendezve</option>
+                      <option value="egysalgo1200">Polc - 1200 mm széles egy sorba rendezve</option>
+                      <option value="ketsalgo1200">Polc - 1200 mm széles két sorba rendezve</option>
+                      <option value="dm3">dm&sup3;</sup>
+                      <option value="zsak">Zsák</option>
+                      <option value="polc800">Polc - 800 mm széles egy sorba rendezve</option>
+                      <option value="ifm">Iratfolyóméter</option>
+                      <option value="egyeb">Egyéb</option>
+
+                    </select>
+                  </div>
+
+                  <div class="col-md-2">
+                    <input type="number" class="form-control ddinput" placeholder="Mennyiség" aria-label=""
+                      id="selectqty4">
+                  </div>
+
+                  <div class="col-md-5"><span>~ </span>
+                    <span id="selectvalueifm4">0</span>
+                    <span> Iratfolyóméter ~ </span>
+                    <span id="selectvaluekg4">0 </span> kg
+
+                  </div>
+                  <div class="col-md-5">
+                    <p onclick="showEgyebField4()"><span id="hint1" class="hint">Nem találod a listában amit
+                        keresel?</span></p>
+                  </div>
+                </div>
+                <div class="row" id="inputegyeb4">
+                  <div class="col-md-5">
+                    <input type="text" class="form-control ddinput" placeholder="Egyedi mértékegység" value="" id="">
+                  </div>
+                  <div class="col-md-3">
+                    <input type="number" class="form-control ddinput" placeholder="Mennyiség" value="" id="">
+                  </div>
+                  <div class="col-md-1">
+                    <img src="x-mark.svg" class="close" id="close4" alt="" onclick="hideEgyebField4()">
+                  </div>
+
+                </div>
+                <div class="row " id="inputgroup5">
+                  <div class="col-md-5">
+                    <select id="select5" class="form-select ddinput" aria-label="">
+                      <option disabled selected>Mértékegység</option>
+                      <option value="kisemelokarosdosszie">Kis dosszié (emelőkaros)</option>
+                      <option value="tokosiratrendezo">Közepes dosszié (tokos / kihúzós iratrendező)</option>
+                      <option value="nagyemelokarosdosszie">Nagy dosszié (emelőkaros)</option>
+                      <option value="leveltaridoboz">Levéltári doboz</option>
+                      <option value="berkartondoboz">Bérkarton doboz</option>
+                      </option>
+                      <option value="hdoboz">"H" doboz (405x330x300mm)</option>
+                      <option value="pdoboz">"P" doboz (350x310x250mm)</option>
+                      <option value="edoboz">"E" doboz (360x310x310mm)</option>
+                      <option value="ndoboz">"N" doboz (350x250x310mm)</option>
+                      <option value="egysalgo900">Polc - 900 mm széles egy sorba rendezve</option>
+                      <option value="ketsalgo900">Polc - 900 mm széles két sorba rendezve</option>
+                      <option value="egysalgo1000">Polc - 1000 mm széles egy sorba rendezve</option>
+                      <option value="ketsalgo1000">Polc - 1000 mm széles két sorba rendezve</option>
+                      <option value="egysalgo1200">Polc - 1200 mm széles egy sorba rendezve</option>
+                      <option value="ketsalgo1200">Polc - 1200 mm széles két sorba rendezve</option>
+                      <option value="dm3">dm&sup3;</sup>
+                      <option value="zsak">Zsák</option>
+                      <option value="polc800">Polc - 800 mm széles egy sorba rendezve</option>
+                      <option value="ifm">Iratfolyóméter</option>
+                      <option value="egyeb">Egyéb</option>
+
+                    </select>
+                  </div>
+
+                  <div class="col-md-2">
+                    <input type="number" class="form-control ddinput" placeholder="Mennyiség" aria-label=""
+                      id="selectqty5">
+                  </div>
+
+                  <div class="col-md-5"><span>~ </span>
+                    <span id="selectvalueifm5">0</span>
+                    <span> Iratfolyóméter ~ </span>
+                    <span id="selectvaluekg5">0 </span> kg
+
+                  </div>
+                  <div class="col-md-5">
+                    <p onclick="showEgyebField5()"><span id="hint1" class="hint">Nem találod a listában amit
+                        keresel?</span></p>
+                  </div>
+                </div>
+                <div class="row" id="inputegyeb5">
+                  <div class="col-md-5">
+                    <input type="text" class="form-control ddinput" placeholder="Egyedi mértékegység" value="" id="">
+                  </div>
+                  <div class="col-md-3">
+                    <input type="number" class="form-control ddinput" placeholder="Mennyiség" value="" id="">
+                  </div>
+                  <div class="col-md-1">
+                    <img src="x-mark.svg" class="close" id="close5" alt="" onclick="hideEgyebField5()">
+                  </div>
+
+                </div>
+
+                <div class="row " id="inputgroup6">
+                  <div class="col-md-5">
+                    <select id="select6" class="form-select ddinput" aria-label="">
+                      <option disabled selected>Mértékegység</option>
+                      <option value="kisemelokarosdosszie">Kis dosszié (emelőkaros)</option>
+                      <option value="tokosiratrendezo">Közepes dosszié (tokos / kihúzós iratrendező)</option>
+                      <option value="nagyemelokarosdosszie">Nagy dosszié (emelőkaros)</option>
+                      <option value="leveltaridoboz">Levéltári doboz</option>
+                      <option value="berkartondoboz">Bérkarton doboz</option>
+                      </option>
+                      <option value="hdoboz">"H" doboz (405x330x300mm)</option>
+                      <option value="pdoboz">"P" doboz (350x310x250mm)</option>
+                      <option value="edoboz">"E" doboz (360x310x310mm)</option>
+                      <option value="ndoboz">"N" doboz (350x250x310mm)</option>
+                      <option value="egysalgo900">Polc - 900 mm széles egy sorba rendezve</option>
+                      <option value="ketsalgo900">Polc - 900 mm széles két sorba rendezve</option>
+                      <option value="egysalgo1000">Polc - 1000 mm széles egy sorba rendezve</option>
+                      <option value="ketsalgo1000">Polc - 1000 mm széles két sorba rendezve</option>
+                      <option value="egysalgo1200">Polc - 1200 mm széles egy sorba rendezve</option>
+                      <option value="ketsalgo1200">Polc - 1200 mm széles két sorba rendezve</option>
+                      <option value="dm3">dm&sup3;</sup>
+                      <option value="zsak">Zsák</option>
+                      <option value="polc800">Polc - 800 mm széles egy sorba rendezve</option>
+                      <option value="ifm">Iratfolyóméter</option>
+                      <option value="egyeb">Egyéb</option>
+
+                    </select>
+                  </div>
+
+                  <div class="col-md-2">
+                    <input type="number" class="form-control ddinput" placeholder="Mennyiség" aria-label=""
+                      id="selectqty6">
+                  </div>
+
+                  <div class="col-md-5"><span>~ </span>
+                    <span id="selectvalueifm6">0</span>
+                    <span> Iratfolyóméter ~ </span>
+                    <span id="selectvaluekg6">0 </span> kg
+
+
+                  </div>
+                  <div class="col-md-5">
+                    <p onclick="showEgyebField6()"><span id="hint1" class="hint">Nem találod a listában amit
+                        keresel?</span></p>
+                  </div>
+                </div>
+                <div class="row" id="inputegyeb6">
+                  <div class="col-md-5">
+                    <input type="text" class="form-control ddinput" placeholder="Egyedi mértékegység" value="" id="">
+                  </div>
+                  <div class="col-md-3">
+                    <input type="number" class="form-control ddinput" placeholder="Mennyiség" value="" id="">
+                  </div>
+                  <div class="col-md-1">
+                    <img src="x-mark.svg" class="close" id="close6" alt="" onclick="hideEgyebField6()">
+                  </div>
+
+                </div>
+
+                <div class="row " id="inputgroup7">
+                  <div class="col-md-5">
+                    <select id="select7" class="form-select ddinput" aria-label="">
+                      <option disabled selected>Mértékegység</option>
+                      <option value="kisemelokarosdosszie">Kis dosszié (emelőkaros)</option>
+                      <option value="tokosiratrendezo">Közepes dosszié (tokos / kihúzós iratrendező)</option>
+                      <option value="nagyemelokarosdosszie">Nagy dosszié (emelőkaros)</option>
+                      <option value="leveltaridoboz">Levéltári doboz</option>
+                      <option value="berkartondoboz">Bérkarton doboz</option>
+                      </option>
+                      <option value="hdoboz">"H" doboz (405x330x300mm)</option>
+                      <option value="pdoboz">"P" doboz (350x310x250mm)</option>
+                      <option value="edoboz">"E" doboz (360x310x310mm)</option>
+                      <option value="ndoboz">"N" doboz (350x250x310mm)</option>
+                      <option value="egysalgo900">Polc - 900 mm széles egy sorba rendezve</option>
+                      <option value="ketsalgo900">Polc - 900 mm széles két sorba rendezve</option>
+                      <option value="egysalgo1000">Polc - 1000 mm széles egy sorba rendezve</option>
+                      <option value="ketsalgo1000">Polc - 1000 mm széles két sorba rendezve</option>
+                      <option value="egysalgo1200">Polc - 1200 mm széles egy sorba rendezve</option>
+                      <option value="ketsalgo1200">Polc - 1200 mm széles két sorba rendezve</option>
+                      <option value="dm3">dm&sup3;</sup>
+                      <option value="zsak">Zsák</option>
+                      <option value="polc800">Polc - 800 mm széles egy sorba rendezve</option>
+                      <option value="ifm">Iratfolyóméter</option>
+                      <option value="egyeb">Egyéb</option>
+
+                    </select>
+                  </div>
+
+                  <div class="col-md-2">
+                    <input type="number" class="form-control ddinput" placeholder="Mennyiség" aria-label=""
+                      id="selectqty7">
+                  </div>
+                  <div class="col-md-5"><span>~ </span>
+                    <span id="selectvalueifm7">0</span>
+                    <span> Iratfolyóméter ~ </span>
+                    <span id="selectvaluekg7">0 </span> kg
+
+                  </div>
+                  <div class="col-md-5">
+                    <p onclick="showEgyebField7()"><span id="hint1" class="hint">Nem találod a listában amit
+                        keresel?</span></p>
+                  </div>
+                </div>
+                <div class="row" id="inputegyeb7">
+                  <div class="col-md-5">
+                    <input type="text" class="form-control ddinput" placeholder="Egyedi mértékegység" value="" id="">
+                  </div>
+                  <div class="col-md-3">
+                    <input type="number" class="form-control ddinput" placeholder="Mennyiség" value="" id="">
+                  </div>
+                  <div class="col-md-1">
+                    <img src="x-mark.svg" class="close" id="close7" alt="" onclick="hideEgyebField7()">
+                  </div>
+
+                </div>
+
+                <div class="row " id="inputgroup8">
+                  <div class="col-md-5">
+                    <select id="select8" class="form-select ddinput" aria-label="">
+                      <option disabled selected>Mértékegység</option>
+                      <option value="dm3">dm&sup3;</sup>
+                      </option>
+                      <option value="zsak">Zsák</option>
+                      <option value="tokosiratrendezo">Tokos iratrendező</option>
+                      <option value="nagyemelokarosdosszie">Nagy emelőkaros dosszié</option>
+                      <option value="kisemelokarosdosszie">Kis emelőkaros dosszié</option>
+                      <option value="leveltaridoboz">Levéltári doboz</option>
+                      <option value="berkartondoboz">Bérkarton doboz</option>
+                      <option value="hdoboz">"H" doboz (405x330x300mm)</option>
+                      <option value="pdoboz">"P" doboz (350x310x250mm)</option>
+                      <option value="edoboz">"E" doboz (360x310x310mm)</option>
+                      <option value="ndoboz">"N" doboz (350x250x310mm)</option>
+                      <option value="egysalgo900">Egysoros 900 mm szélességű salgó polc</option>
+                      <option value="ketsalgo900">Kétsoros 900 mm szélességű salgó polc</option>
+                      <option value="egysalgo1000">Egysoros 1000 mm szélességű salgó polc</option>
+                      <option value="ketsalgo1000">kétsoros 1000 mm szélességű salgó polc</option>
+                      <option value="egysalgo1200">Egysoros 1200 mm szélességű salgó polc</option>
+                      <option value="ketsalgo1200">Kétsoros 1200 mm szélességű salgó polc</option>
+                      <option value="polc800">800 mm széles irodai polc</option>
+                      <option value="ifm">Iratfolyóméter</option>
+                      <option value="egyeb">Egyéb</option>
+
+                    </select>
+                  </div>
+
+                  <div class="col-md-2">
+                    <input type="number" class="form-control ddinput" placeholder="Mennyiség" aria-label=""
+                      id="selectqty8">
+                  </div>
+
+                  <div class="col-md-5"><span>~ </span>
+                    <span id="selectvalueifm8">0</span>
+                    <span> Iratfolyóméter ~ </span>
+                    <span id="selectvaluekg8">0 </span> kg
+
+                  </div>
+                  <div class="col-md-5">
+                    <p onclick="showEgyebField8()"><span id="hint1" class="hint">Nem találod a listában amit
+                        keresel?</span></p>
+                  </div>
+                </div>
+                <div class="row" id="inputegyeb8">
+                  <div class="col-md-5">
+                    <input type="text" class="form-control ddinput" placeholder="Egyedi mértékegység" value="" id="">
+                  </div>
+                  <div class="col-md-3">
+                    <input type="number" class="form-control ddinput" placeholder="Mennyiség" value="" id="">
+                  </div>
+                  <div class="col-md-1">
+                    <img src="x-mark.svg" class="close" id="close8" alt="" onclick="hideEgyebField8()">
+                  </div>
+
+                </div>
+
+              </div>
+
+              <!-- ITT KEZDŐDNEK A PLUSZ GOMBOK -->
+
+              <div id="addbtn1" class="col-md-2">
+                <span id="addbtntest" class="w-100 btn btn-primary btn-lg addelement d-flex" onclick="addElement()"><img
+                    class="addelementsvg" src="ujsor.svg" alt="add">
+                </span>
+              </div>
+              <div id="addbtn2" class="col-md-2">
+                <span id="addbtntest" class="w-50 btn btn-primary btn-lg addelement d-flex" onclick="addElement2()"><img
+                    class="addelementsvg" src="ujsor.svg" alt="add">
+                </span>
+              </div>
+              <div id="addbtn3" class="col-md-2">
+                <span id="addbtntest" class="w-50 btn btn-primary btn-lg addelement d-flex" onclick="addElement3()"><img
+                    class="addelementsvg" src="ujsor.svg" alt="add">
+                </span>
+              </div>
+              <div id="addbtn4" class="col-md-2">
+                <span id="addbtntest" class="w-50 btn btn-primary btn-lg addelement d-flex" onclick="addElement4()"><img
+                    class="addelementsvg" src="ujsor.svg" alt="add">
+                </span>
+              </div>
+              <div id="addbtn5" class="col-md-2">
+                <span id="addbtntest" class="w-50 btn btn-primary btn-lg addelement d-flex" onclick="addElement5()"><img
+                    class="addelementsvg" src="ujsor.svg" alt="add">
+                </span>
+              </div>
+              <div id="addbtn6" class="col-md-2">
+                <span id="addbtntest" class="w-50 btn btn-primary btn-lg addelement d-flex" onclick="addElement6()"><img
+                    class="addelementsvg" src="ujsor.svg" alt="add">
+                </span>
+              </div>
+              <div id="addbtn7" class="col-md-2">
+                <span id="addbtntest" class="w-50 btn btn-primary btn-lg addelement d-flex" onclick="addElement7()"><img
+                    class="addelementsvg" src="ujsor.svg" alt="add">
+                </span>
+              </div>
+              </br>
+            </div>
+            <div class="col-sm-6">
+              <textarea class="form-control ddinput textarea" placeholder="Egyéb megjegyzések" aria-label="Egyéb megjegyzések
+                  "></textarea>
+            </div>
+
+            <hr class="my-4">
+          </form>
+        </div>
+      </div>
+    </main>
+
+    <footer class="my-5 pt-5 text-muted text-center text-small">
+      <p class="mb-1">&copy; <span id="date"></span> Docudepo Kft.</p>
+      <ul class="list-inline">
+        <li class="list-inline-item"><a href="#">Adatvédelmi szabályzat</a></li>
+      </ul>
+
+      <p class="mb-1"><a href="https://docudepo.hu/"> Vissza a főoldalara</p></a>
+
+    </footer>
+  </div>
+
+
+  <script src="https://getbootstrap.com/docs/5.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+    crossorigin="anonymous"></script>
+
+
+</body>
+
+</html>
